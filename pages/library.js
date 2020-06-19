@@ -10,7 +10,7 @@ export default function Library(){
   const [search,setSearch] = useState();
   const [obj,setObj] = useState([])
   const bar = () => {
-    fetch('http://05ccd39cdb52.ngrok.io/findbook',{
+    fetch('http://4adb4b118355.ngrok.io/findbook',{
       method: 'POST',
       headers: {
       Accept: 'application/json',
@@ -28,7 +28,7 @@ export default function Library(){
   }
   return(
     <View >
-    <View style={{marginTop:40}}>
+    <View>
   <Searchbar
   value={search}
   onChangeText={(text)=>setSearch(text)}

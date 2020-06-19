@@ -7,12 +7,21 @@ import MyBooks from '../pages/mybooks';
 const RootDrawerNavigator = createDrawerNavigator({
         Profile:{
             screen:Profile,
+            navigationOptions: {
+              title:'Profile',
+            }
         },
         Library:{
           screen:Library,
+          navigationOptions: {
+            title:'Library',
+          }
         },
         MyBooks:{
           screen:MyBooks,
+            navigationOptions: {
+              title:'MyBooks',
+            }
         }
 });
 

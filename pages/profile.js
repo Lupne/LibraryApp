@@ -19,7 +19,7 @@ export default function Profile({navigation}){
   const [upl,setUpl] = useState(false)
   const update = ()=>{
     try{
-      fetch('http://05ccd39cdb52.ngrok.io/update/'+detail.username,{
+      fetch('http://4adb4b118355.ngrok.io/update/'+detail.username,{
         method: 'PUT',
         headers: {
         Accept: 'application/json',

@@ -21,8 +21,8 @@ const LoginStack = createStackNavigator({
   draw:{
     screen:RootDrawerNavigator,
     navigationOptions: {
-      title:'',
-      headerShown:false,
+      headerLeft:false,
+      title:''
       }
   }
 })
