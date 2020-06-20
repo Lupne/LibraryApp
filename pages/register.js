@@ -11,7 +11,7 @@ export default function Register({navigation}) {
 
   const  register = ()=>{
     try{
-      fetch('http://406d4a96cbbd.ngrok.io/reg',{
+      fetch('http://75063bd96e5b.ngrok.io/reg',{
         method: 'POST',
         headers: {
         Accept: 'application/json',
