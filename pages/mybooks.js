@@ -15,7 +15,7 @@ export default function MyBooks(){
   })
   const obj = [];
   arr.map((book)=>{
-    fetch('http://4adb4b118355.ngrok.io/getbook',{
+    fetch('http://406d4a96cbbd.ngrok.io/getbook',{
       method: 'POST',
       headers: {
       Accept: 'application/json',
@@ -75,7 +75,7 @@ export default function MyBooks(){
   )
   else {
     return(
-      <View style={{alignItems:'center',justifyContent:'center',marginTop:400}}><Text style={{fontSize:30,fontWeight:'bold'}}>Loading...</Text></View>
+      <View style={{alignItems:'center',justifyContent:'center',marginTop:400}}><Text style={{fontSize:15,fontWeight:'bold',fontStyle:'italic'}}>Loading...</Text></View>
     )
   }
 }

@@ -12,7 +12,7 @@ export default function Login({navigation}) {
   const [swtch,setSwitch] = useState(false)
   const  login = async()=>{
     try{
-      await fetch('http://4adb4b118355.ngrok.io/login',{
+      await fetch('http://406d4a96cbbd.ngrok.io/login',{
         method: 'POST',
         headers: {
         Accept: 'application/json',
@@ -27,7 +27,7 @@ export default function Login({navigation}) {
       .then((data) => SetisSign(data))
       if(isSign === true)
       {
-        fetch('http://4adb4b118355.ngrok.io/getdetails',{
+        fetch('http://406d4a96cbbd.ngrok.io/getdetails',{
           method: 'POST',
           headers: {
           Accept: 'application/json',

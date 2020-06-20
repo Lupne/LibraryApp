@@ -1,8 +1,10 @@
 import {createDrawerNavigator} from 'react-navigation-drawer';
 import {createAppContainer} from 'react-navigation';
+import {  createStackNavigator, HeaderTitle } from 'react-navigation-stack';
 import Profile from '../pages/profile';
-import Library from '../pages/library';
 import MyBooks from '../pages/mybooks';
+import Library from '../pages/library';
+import About from '../pages/about';
 
 const RootDrawerNavigator = createDrawerNavigator({
         Profile:{
@@ -13,16 +15,16 @@ const RootDrawerNavigator = createDrawerNavigator({
         },
         Library:{
           screen:Library,
-          navigationOptions: {
-            title:'Library',
-          }
         },
         MyBooks:{
           screen:MyBooks,
             navigationOptions: {
               title:'MyBooks',
             }
-        }
+        },
+        About:{
+          screen:About,
+        },
 });
 
 export default RootDrawerNavigator
