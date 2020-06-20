@@ -8,22 +8,22 @@ import RootDrawerNavigator from './drawer'
 const LoginStack = createStackNavigator({
   log:{
     screen:Login,
-    navigationOptions: {
-        headerShown: false,
-      }
+    navigationOptions:{
+      headerTitle:'',
+    }
   },
   reg:{
     screen:Register,
-    navigationOptions: {
-        headerShown: false,
-      }
+    navigationOptions:{
+      headerTitle:'',
+    }
   },
   draw:{
     screen:RootDrawerNavigator,
-    navigationOptions: {
+    navigationOptions:{
+      headerTitle:'',
       headerLeft:false,
-      title:''
-      }
+    }
   }
 })
 

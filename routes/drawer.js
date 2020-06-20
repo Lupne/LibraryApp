@@ -5,26 +5,21 @@ import Profile from '../pages/profile';
 import MyBooks from '../pages/mybooks';
 import Library from '../pages/library';
 import About from '../pages/about';
-import Help from '../pages/help'
+import Direction from '../pages/direction'
+import LibraryStack from './reviewstack'
 
 const RootDrawerNavigator = createDrawerNavigator({
         Profile:{
             screen:Profile,
-            navigationOptions: {
-              title:'Profile',
-            }
         },
         Library:{
-          screen:Library,
+          screen:LibraryStack,
         },
         MyBooks:{
           screen:MyBooks,
-            navigationOptions: {
-              title:'MyBooks',
-            }
         },
-        Help:{
-          screen:Help,
+        Direction:{
+          screen:Direction,
         },
         About:{
           screen:About,
