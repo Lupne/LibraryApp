@@ -1,13 +1,16 @@
 import React from 'react';
 import {  createStackNavigator, HeaderTitle } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
-import Login from '../pages/login'
+import Review from '../pages/review'
 import Library from '../pages/library';
 import RootDrawerNavigator from './drawer'
 
 const screens = {
   Library:{
     screen:Library
+  },
+  Review:{
+    screen:Review
   }
 }
 

@@ -92,6 +92,7 @@ export default function MyBooks(){
   )
   else {
     return(
+      //loading work
       <View style={{alignItems:'center',justifyContent:'center',marginTop:400}}><Text style={{fontSize:15,fontWeight:'bold',fontStyle:'italic'}}>Loading...</Text></View>
     )
   }
