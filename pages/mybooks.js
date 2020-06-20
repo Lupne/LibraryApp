@@ -52,7 +52,7 @@ export default function MyBooks(){
   const [id,setiD] = useState('')
   const submit = ()=>{
     setModal(false)
-    /////put request for a review
+    /////[posts request for a review
   }
   if(sshow===true)
   return(
@@ -92,8 +92,7 @@ export default function MyBooks(){
   )
   else {
     return(
-      //loading work
-      <View style={{alignItems:'center',justifyContent:'center',marginTop:400}}><Text style={{fontSize:15,fontWeight:'bold',fontStyle:'italic'}}>Loading...</Text></View>
+      <View style={{alignItems:'center',marginTop:250}}><Image style={{height:150,width:150}} source={{uri:'https://img.pngio.com/collection-of-free-transparent-logo-book-download-on-ui-ex-png-books-black-and-white-400_400.png'}}/><Text style={{fontSize:15,fontWeight:'bold',fontStyle:'italic'}}>Loading...</Text></View>
     )
   }
 }

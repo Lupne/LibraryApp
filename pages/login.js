@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { StyleSheet, Text, View,TextInput,TouchableWithoutFeedback,Keyboard } from 'react-native';
+import { StyleSheet, Text, View,TextInput,TouchableWithoutFeedback,Keyboard,Image } from 'react-native';
 import FlatButton from '../graphics/button'
 import Profile from './profile'
 import UserInfo from './userinfo'
@@ -40,6 +40,7 @@ export default function Login({navigation}) {
         .then((response) => response.json())
         .then((data) =>setUse(data))
         .then(()=>setSwitch(true))
+        //setting up info for sending
         const det = {'username':use.username,
         'first_name':use.first_name,
         'last_name':use.last_name,
@@ -49,6 +50,7 @@ export default function Login({navigation}) {
         'dp':use.dp,
         'issue':use.issue
       }
+      //updating user informating for later use
       UserInfo.first_name = det.first_name
       UserInfo.last_name = det.last_name
       UserInfo.dept = det.dept
@@ -57,7 +59,10 @@ export default function Login({navigation}) {
       UserInfo.find = det.fine
       UserInfo.issue = det.issue;
         if(swtch===true)
-        navigation.navigate('draw',det)
+        //navigating to profile and sending info across the stack
+        setTimeout(()=>{navigation.navigate('draw',det)
+        console.log('enter')
+      },4000)
       }
     }
     catch(e){
@@ -67,6 +72,7 @@ export default function Login({navigation}) {
   return (
     <View style={styles.container}>
       <View>
+      <Image style={{height:150,width:150,marginLeft:60}} source={{uri:'https://img.pngio.com/collection-of-free-transparent-logo-book-download-on-ui-ex-png-books-black-and-white-400_400.png'}}/>
       <TextInput placeholder ='Username'  onChangeText={text=>Setusername(text)} style={styles.input} />
       <TextInput placeholder ='Password'  onChangeText={text=>Setpassword(text)} style={styles.input}/>
       </View>
@@ -89,7 +95,7 @@ const styles = StyleSheet.create({
   container:{
     flex:1,
     alignItems: 'center',
-    justifyContent: 'center',
+    marginTop:160,
   },
   direction:{
     flexDirection:'row',

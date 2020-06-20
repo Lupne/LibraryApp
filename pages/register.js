@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { StyleSheet, Text, View,TextInput,TouchableWithoutFeedback,Keyboard } from 'react-native';
+import { StyleSheet, Text, View,TextInput,TouchableWithoutFeedback,Keyboard,Image } from 'react-native';
 import FlatButton from '../graphics/button'
 
 export default function Register({navigation}) {
@@ -32,6 +32,7 @@ export default function Register({navigation}) {
   return (
     <View style={styles.container}>
       <View>
+      <Image style={{height:150,width:150,marginLeft:60}} source={{uri:'https://img.pngio.com/collection-of-free-transparent-logo-book-download-on-ui-ex-png-books-black-and-white-400_400.png'}}/>
       <TextInput placeholder ='First Name'  onChangeText={text=>Setfirst(text)} style={styles.input}/>
       <TextInput placeholder ='Last Name'  onChangeText={text=>Setsecond(text)} style={styles.input}/>
       <TextInput placeholder ='Department'  onChangeText={text=>Setdept(text)} style={styles.input}/>
@@ -54,6 +55,6 @@ const styles = StyleSheet.create({
   container:{
     flex:1,
     alignItems: 'center',
-    justifyContent: 'center',
+    marginTop:60,
   },
 });
