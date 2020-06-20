@@ -81,7 +81,7 @@ export default function MyBooks(){
          <Text style={{marginTop:12}}>Issued Date {item.idate}</Text>
          <Text style={{marginTop:12}}>Return Date {item.rdate}</Text>
          <Text style={{marginTop:12,marginBottom:5}}>Fine Pending 0</Text>
-         <View style={{flexDirection:'row'}}><MaterialIcons name="rate-review" size={40} onPress={()=>{setiD(item.key)
+         <View style={{flexDirection:'row'}}><MaterialIcons name="rate-review" size={40} color='#808080' onPress={()=>{setiD(item.key)
            setModal(true)}}/><Text style={{marginTop:6,fontWeight:'bold'}}>   Add a Review</Text></View>
          </View>
          </View>
