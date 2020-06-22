@@ -1,3 +1,2 @@
 Pending Work
--Review GUI betterment
 -SignOut Button work

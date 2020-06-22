@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import {View,Text,Button,FlatList,Image,Modal,TextInput} from 'react-native';
 import Card from './card'
+import Rating from '../graphics/rating'
 
 export default function Direction({navigation}){
   const [DATA,setDATA] = useState([]);
@@ -30,9 +31,9 @@ export default function Direction({navigation}){
       return(
         <View style={{padding:24}}>
         <Card>
-          <Text>{item.title}</Text>
+          <View style={{alignItems:'center',marginBottomWidth:3,marginBottom:5}}><Text style={{fontSize:17,fontWeight:'bold'}}>{item.title}</Text></View>
           <Text>{item.body}</Text>
-          <View style={{flexDirection:'row',paddingTop:16,borderTopColor:'#eee',borderTopWidth:1,marginTop:2}}><Text>{item.rating}</Text></View>
+          <View style={{flexDirection:'row',borderTopColor:'#eee',borderTopWidth:1,marginTop:2,marginLeft:24}}><Rating star={item.rating}/></View>
         </Card>
         </View>
       )
