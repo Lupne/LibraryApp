@@ -19,7 +19,7 @@ export default function Profile({navigation}){
   const [upl,setUpl] = useState(false)
   const update = ()=>{
     try{
-      fetch('http://75063bd96e5b.ngrok.io/update/'+detail.username,{
+      fetch('http://2c728de66d27.ngrok.io/update/'+detail.username,{
         method: 'PUT',
         headers: {
         Accept: 'application/json',
@@ -53,7 +53,9 @@ export default function Profile({navigation}){
     >
     </DialogInput>
     <View style={styles.header}></View>
-          <Image style={styles.avatar} source={{uri: link}}/>
+          <View style={{alignSelf:'center',position: 'absolute',marginTop:130}}>
+          <Avatar  rounded size="xlarge" source={{uri: link}} onPress={()=>setUpl(true)}/>
+          </View>
           <View style={styles.body}>
             <View style={styles.bodyContent}>
               <Text style={styles.name}>{detail.first_name} {detail.last_name}</Text>
@@ -86,9 +88,6 @@ const styles = StyleSheet.create({
    height:200,
  },
  avatar: {
-   width: 130,
-   height: 130,
-   borderRadius: 63,
    borderWidth: 4,
    borderColor: "white",
    marginBottom:10,
