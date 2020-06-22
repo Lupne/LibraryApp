@@ -63,7 +63,7 @@ export default function Profile({navigation}){
               <Text style={styles.description}>{detail.username}</Text>
               <Text style={styles.description}>{detail.book} Books Issued</Text>
               <Text style={styles.description}>{detail.fine} Pending Fine</Text>
-              <TouchableOpacity style={styles.buttonContainer}>
+              <TouchableOpacity style={styles.buttonContainer} onPress={()=>navigation.navigate('log')}>
                 <Text style={{color:'white',fontWeight:'bold',textTransform:'uppercase',fontSize:16,textAlign:'center',alignItems: 'center'}}>LogOut</Text>
               </TouchableOpacity>
             </View>
