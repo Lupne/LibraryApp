@@ -97,7 +97,7 @@ export default function MyBooks(){
          <Image source={{uri:item.image}} style={{height:250,width:170}} />
          </View>
          <View>
-         <Text style={{fontWeight:'bold',fontSize:20,marginTop:7}}>{item.name}  By</Text>
+         <Text style={{fontWeight:'bold',fontSize:20,marginTop:7}}>{item.name}</Text>
          <Text style={{fontWeight:'bold',fontSize:20,fontStyle:'italic'}}>{item.author}</Text>
          <Text style={{marginTop:12}}>Issued by {UserInfo.first_name} {UserInfo.last_name}</Text>
          <Text style={{marginTop:12}}>Issued Date {item.idate}</Text>

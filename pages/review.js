@@ -37,7 +37,7 @@ export default function Direction({navigation}){
         </Card>
         </View>
       )
-    }} />
+    }} keyExtractor={item => item._id}/>
     </View>
   )
   else {
