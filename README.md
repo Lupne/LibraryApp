@@ -5,10 +5,15 @@ This application is developed so that students can manage their books issued fro
 ## Features
 
 Search the books Library.
+
 Check Reviews over that book.
+
 Issue that book.
+
 Add review on a book after reading it.
+
 Get Directions to the library on map.
+
 Manage and avoid paying fines.
 
 ## Images
