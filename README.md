@@ -13,4 +13,4 @@ Manage and avoid paying fines.
 
 ## Images
 
-<img src="https://i.ibb.co/SrwV3SN/991870b2-3f1d-40cd-81d6-a611db16320e.jpg" width="310" height="600">
+<img src="https://i.ibb.co/SrwV3SN/991870b2-3f1d-40cd-81d6-a611db16320e.jpg" width="210" height="400">
