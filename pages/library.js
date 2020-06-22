@@ -11,7 +11,7 @@ export default function Library({navigation}){
   const [search,setSearch] = useState();
   const [obj,setObj] = useState([])
   const bar = () => {
-    fetch('http://2c728de66d27.ngrok.io/findbook',{
+    fetch('http://3306dfd1592c.ngrok.io/findbook',{
       method: 'POST',
       headers: {
       Accept: 'application/json',
@@ -49,7 +49,7 @@ export default function Library({navigation}){
         UserInfo.issue[i].idate = day+"/"+monthi+"/"+year
         UserInfo.issue[i].rdate = day+"/"+month+"/"+year
         UserInfo.book = UserInfo.book+1;
-        fetch('http://2c728de66d27.ngrok.io/update/'+UserInfo.username,{
+        fetch('http://3306dfd1592c.ngrok.io/update/'+UserInfo.username,{
           method: 'PUT',
           headers: {
           Accept: 'application/json',

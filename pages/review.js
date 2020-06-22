@@ -5,7 +5,7 @@ import Card from './card'
 export default function Direction({navigation}){
   const [DATA,setDATA] = useState([]);
   const [show,setShow] = useState(false);
-  fetch('http://2c728de66d27.ngrok.io/getrev',{
+  fetch('http://3306dfd1592c.ngrok.io/getrev',{
     method: 'POST',
     headers: {
     Accept: 'application/json',

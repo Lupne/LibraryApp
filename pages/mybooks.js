@@ -15,7 +15,7 @@ export default function MyBooks(){
   })
   const obj = [];
   arr.map((book)=>{
-    fetch('http://2c728de66d27.ngrok.io/getbook',{
+    fetch('http://3306dfd1592c.ngrok.io/getbook',{
       method: 'POST',
       headers: {
       Accept: 'application/json',
@@ -52,7 +52,29 @@ export default function MyBooks(){
   const [id,setiD] = useState('')
   const submit = ()=>{
     setModal(false)
-    /////[posts request for a review
+    fetch('http://3306dfd1592c.ngrok.io/addrev',{
+      method: 'POST',
+      headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+      id:id,
+      title:title,
+      body:body,
+      rating:rating,
+      })
+    }).then(()=>{fetch('http://3306dfd1592c.ngrok.io/addrating',{
+      method: 'PUT',
+      headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+      id:id,
+      rating:rating,
+      })
+    })})
   }
   if(sshow===true)
   return(

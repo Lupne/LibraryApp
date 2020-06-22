@@ -1,6 +1,3 @@
 Pending Work
 -Review GUI betterment
--Rating PUT Request
--Rating Updates
--Direction API from Google
 -SignOut Button work
