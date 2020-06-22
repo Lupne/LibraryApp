@@ -7,7 +7,7 @@ import RootDrawerNavigator from './drawer'
 
 const screens = {
   Library:{
-    screen:Library
+    screen:Library,
   },
   Review:{
     screen:Review
