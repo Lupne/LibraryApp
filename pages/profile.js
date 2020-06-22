@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
    fontWeight:'600',
  },
  body:{
-   marginTop:40,
+   marginTop:60,
  },
  bodyContent: {
    flex: 1,
