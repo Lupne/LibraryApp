@@ -9,4 +9,5 @@ export default info = {
     book:'',
     fine:'',
     issue:[],
+    dp:'',
   }

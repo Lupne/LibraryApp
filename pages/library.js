@@ -27,6 +27,28 @@ export default function Library({navigation}){
     console.log(obj)
     setSearch('');
   }
+  const bookissue = (val)=>{
+    for(let i=0;i<3;i++)
+    {
+      if(UserInfo.issue[i]._id === "-1")
+      {
+        UserInfo.issue[i]._id = val;
+        UserInfo.book = UserInfo.book+1;
+        fetch('http://2c728de66d27.ngrok.io/update/'+UserInfo.username,{
+          method: 'PUT',
+          headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+          issue:UserInfo.issue,
+          book:UserInfo.book
+          })
+        })
+        break;
+      }
+    }
+  }
   return(
     <View >
     <View>
@@ -45,7 +67,7 @@ export default function Library({navigation}){
         {Alert.alert('Error','You already have three books',[{ text: 'OK', onPress: () => console.log('OK Pressed') }],{ cancelable: false });}
         else
         {
-          //issue the book request
+          bookissue(item.key);
         }
       }}/><View style={{marginLeft:47,marginRight:47}}><AntDesign name="infocirlce" size={30} color='#808080' /></View><AntDesign name="star" size={30} color='#808080' onPress={()=>navigation.navigate('Review',item)}/></View>
       </Card>

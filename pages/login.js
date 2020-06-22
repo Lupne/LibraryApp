@@ -38,7 +38,8 @@ export default function Login({navigation}) {
           })
         })
         .then((response) => response.json())
-        .then((data) =>setUse(data))
+        .then((data) =>{
+          setUse(data)})
         .then(()=>setSwitch(true))
         //setting up info for sending
         const det = {'username':use.username,
@@ -58,6 +59,7 @@ export default function Login({navigation}) {
       UserInfo.book = det.book
       UserInfo.find = det.fine
       UserInfo.issue = det.issue;
+      UserInfo.dp = det.dp
         if(swtch===true)
         //navigating to profile and sending info across the stack
         setTimeout(()=>{navigation.navigate('draw',det)
